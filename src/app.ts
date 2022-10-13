@@ -1,12 +1,12 @@
 const express = require("express");
 const { Client, GatewayIntentBits } = require('discord.js');
 const dotenv = require('dotenv');
-dotenv.config();
+dotenv.config({ path: '../vars/.env' });
 const app = express();
 
 console.log("Bot Id ", process.env.DISCORD_BOT);
-console.log("Discord Channel Id ", process.env.DISCORD_CHANNEL_ID);
-console.log("Port ", process.env.POR);
+console.log("Discord Channel Id ", process.env.DISCORD_CHANNEL);
+console.log("Port ", process.env.PORT);
 
 const client = new Client({
     intents: [
